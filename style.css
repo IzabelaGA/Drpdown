@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #87ceeb;
+    --secondary-color: #4169e1;
+    --text-primary: #333;
+    --text-secondary: #fff;
+    --body-color: #f4f4f4;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    background: var(--body-color);
+}
+
+
+#navbar ul {
+    list-style: none;
+    padding: .5rem;
+}
+
+#navbar ul li {
+    color: var(--text-primary);
+    display: inline-block;
+    padding: .5rem 1rem;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+#navbar ul li:hover {
+    cursor: pointer;
+    color: var(--text-secondary);
+    background: var(--primary-color);
+}
+
+#navbar ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+#navbar ul li:hover a {
+    color: var(--text-secondary);
+}
+
+/* Hide nested ul by default */
+#navbar ul li ul {
+    display: none;
+}
+
+/* Nested dropdown show */
+#navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: .5rem;
+}
+
+#navbar ul li:hover ul li {
+    display: block;
+    background: var(--body-color);
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+#navbar ul li:hover ul li a {
+    color: var(--text-primary);
+}
+
+#navbar ul li:hover ul li:hover {
+    background: var(--text-secondary);
+}
+
+#navbar ul li:hover ul li span {
+    float: right;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    line-height: 100%;
+    transition: .3s ease-in-out;
+}
+
+#navbar ul li:hover ul li:hover span {
+    transform: rotate(30deg);
+    color: var(--primary-color);
+}
+
+#showcase {
+    height: 50vh;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+#showcase h1 {
+    color: var(--text-secondary);
+    font-size: 2.5rem;
+}
+
+@media(max-width:600px) {
+    #navbar ul li {
+        display: block;
+    }
+
+    #navbar ul li:hover ul {
+        position: relative;
+        width: 100%;
+    }
+}
