@@ -92,7 +92,8 @@ body {
 
 #showcase {
     height: 50vh;
-    background: var(--primary-color);
+    background: linear-gradient(to right top, #8cc7c3, #6bb6c0, #4ea4bf, #3e90bc, #437ab4), url(../img/04.png);
+    /* background-blend-mode: multiply; */
     display: flex;
     flex-direction: column;
     align-items: center;
